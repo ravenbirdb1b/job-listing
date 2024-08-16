@@ -1,0 +1,142 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  padding: 0px;
+  background-color: hsl(180, 8%, 52%);
+  max-height: 100px;
+}
+
+.bg-header {
+  width: 100%;
+  max-height: 100px;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.job-listing-wrapper {
+  padding: 4rem 12rem;
+  font-family: "League Spartan", sans-serif;
+}
+
+.job-card-wrapper {
+  display: flex;
+  justify-content: space-between;
+  box-shadow: rgba(119, 124, 129, 0.2) 0px 8px 24px;
+  padding: 1.5rem 2rem;
+  font-size: 15px;
+  margin-bottom: 1.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  border-left: 4px solid #fff;
+}
+
+.job-card-wrapper.selected {
+  border-left: 4px solid hsl(180, 29%, 50%);
+}
+
+.job-card-content-wrapper {
+  display: flex;
+  gap: 1rem;
+}
+
+.job-content {
+  text-align: left;
+}
+
+.company-name-wrapper {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-top: 8px;
+
+  .company-name {
+    color: hsl(180, 29%, 50%);
+    font-weight: 700;
+  }
+
+  .job-tag-wrapper {
+    display: flex;
+    gap: 8px;
+    font-size: 13px;
+  }
+}
+
+.job-tag {
+  color: #fff;
+  border-radius: 12px;
+  padding: 4px 8px;
+  text-transform: uppercase;
+}
+
+.job-tag.new {
+  background-color: hsl(180, 29%, 50%);
+}
+
+.job-tag.featured {
+  background-color: black;
+}
+
+.job-role {
+  font-size: 16px;
+  font-weight: 700;
+  color: #000;
+  margin-top: 12px;
+}
+
+.job-metadata-wrapper {
+  display: flex;
+  margin-top: 12px;
+  gap: 12px;
+  color: hsl(180, 8%, 52%);
+  align-items: center;
+}
+
+.seperator {
+  height: 3px;
+  width: 3px;
+  background-color: hsl(180, 8%, 52%);
+  border-radius: 50%;
+}
+
+.job-card-tag-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.job-card-tags-wrapper {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.job-card-tag {
+  padding: 4px 8px;
+  background-color: hsl(180, 52%, 96%);
+  color: hsl(180, 29%, 50%);
+  font-weight: 700;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
