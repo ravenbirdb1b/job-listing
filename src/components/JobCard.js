@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 const JobCard = (props) => {
   const {
@@ -18,6 +18,8 @@ const JobCard = (props) => {
     setIsSelected,
   } = props;
 
+  const [cardFilters, setCardFilters] = useState([]);
+
   const handleSelect = (id) => {
     if (selected) {
       setIsSelected((prev) => prev.filter((prevId) => prevId !== id));
@@ -25,12 +27,17 @@ const JobCard = (props) => {
       setIsSelected((prev) => [...prev, id]);
     }
   };
+  console.log(company, cardFilters);
+  const handleFilterSelect = (filter) => {
+    if (cardFilters.includes(filter)) {
+      setCardFilters(cardFilters.filter((cardFilter) => cardFilter !== filter));
+    } else {
+      setCardFilters([...cardFilters, filter]);
+    }
+  };
 
   return (
-    <div
-      className={`job-card-wrapper ${selected ? "selected" : ""}`}
-      onClick={() => handleSelect(id)}
-    >
+    <div className={`job-card-wrapper ${selected ? "selected" : ""}`}>
       <div className="job-card-content-wrapper">
         <div className="job-card-image">
           <img src={logo} alt={company} />
@@ -45,7 +52,9 @@ const JobCard = (props) => {
             </div>
           </div>
 
-          <div className="job-role">{position}</div>
+          <div className="job-role" onClick={() => handleSelect(id)}>
+            {position}
+          </div>
 
           <div className="job-metadata-wrapper">
             <div className="job-metadata">{postedAt}</div>
@@ -60,7 +69,13 @@ const JobCard = (props) => {
       <div className="job-card-tag-info">
         <div className="job-card-tags-wrapper">
           {[`${role}`, `${level}`, ...languages, ...tools].map((tag, idx) => (
-            <div className="job-card-tag" key={idx}>
+            <div
+              className={`job-card-tag ${
+                cardFilters.includes(tag) ? "selected" : ""
+              }`}
+              key={idx}
+              onClick={() => handleFilterSelect(tag)}
+            >
               {tag}
             </div>
           ))}

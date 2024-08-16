@@ -41,7 +41,6 @@
   font-size: 15px;
   margin-bottom: 1.5rem;
   border-radius: 6px;
-  cursor: pointer;
   border-left: 4px solid #fff;
 }
 
@@ -96,6 +95,7 @@
   font-weight: 700;
   color: #000;
   margin-top: 12px;
+  cursor: pointer;
 }
 
 .job-metadata-wrapper {
@@ -130,6 +130,13 @@
   background-color: hsl(180, 52%, 96%);
   color: hsl(180, 29%, 50%);
   font-weight: 700;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.job-card-tag.selected {
+  background-color: hsl(180, 29%, 50%);
+  color: #fff;
 }
 
 @keyframes App-logo-spin {

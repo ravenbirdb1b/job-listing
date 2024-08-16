@@ -5,6 +5,7 @@ import data from "./data/data.json";
 
 function App() {
   const [isSelected, setIsSelected] = useState([]);
+  const [filters, setFilters] = useState([]);
 
   return (
     <div className="App">
@@ -22,6 +23,8 @@ function App() {
             key={job.id}
             selected={isSelected.includes(job.id)}
             setIsSelected={setIsSelected}
+            filters={filters}
+            setFilters={setFilters}
           />
         ))}
       </div>
