@@ -16,6 +16,8 @@ const JobCard = (props) => {
     tools,
     selected,
     setIsSelected,
+    filters,
+    setFilters,
   } = props;
 
   const [cardFilters, setCardFilters] = useState([]);
@@ -27,12 +29,16 @@ const JobCard = (props) => {
       setIsSelected((prev) => [...prev, id]);
     }
   };
-  console.log(company, cardFilters);
+
   const handleFilterSelect = (filter) => {
     if (cardFilters.includes(filter)) {
       setCardFilters(cardFilters.filter((cardFilter) => cardFilter !== filter));
     } else {
       setCardFilters([...cardFilters, filter]);
+
+      if (!filters.includes(filter)) {
+        setFilters([...filters, filter]);
+      }
     }
   };
 

@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  font-family: "League Spartan", sans-serif;
 }
 
 .App-logo {
@@ -16,12 +17,79 @@
 .App-header {
   padding: 0px;
   background-color: hsl(180, 8%, 52%);
+  position: relative;
   max-height: 100px;
+  min-height: 100px;
+}
+
+.filter-wrapper {
+  position: absolute;
+  width: calc(100vw);
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 3;
+  bottom: -32.5px;
+}
+
+.filter-card-wrapper {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem 2rem;
+  box-shadow: rgba(119, 124, 129, 0.2) 0px 8px 24px;
+  align-items: center;
+  border-radius: 6px;
+  width: calc(100% - 24rem);
+  margin: 0px 12rem;
+}
+
+.filter-card-wrapper.hidden {
+  display: none;
+}
+
+.filter-content {
+  display: flex;
+  gap: 12px;
+}
+
+.filter-card.job-card-tag {
+  display: flex;
+  border-radius: 4px;
+  padding: 0px;
+}
+.filter-name {
+  padding: 6px 8px;
+}
+
+.remove-action-btn {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0px 6px;
+  border-radius: 0px 4px 4px 0px;
+  background-color: hsl(180, 29%, 50%);
+}
+
+.remove-action-btn:hover {
+  background-color: #000;
+}
+
+.remove-action-icon {
+  color: #fff;
+}
+
+.clear-action {
+  color: hsl(180, 29%, 50%);
+  font-weight: 700;
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 .bg-header {
   width: 100%;
   max-height: 100px;
+  z-index: 1;
 }
 
 .App-link {
@@ -29,8 +97,7 @@
 }
 
 .job-listing-wrapper {
-  padding: 4rem 12rem;
-  font-family: "League Spartan", sans-serif;
+  padding: 6rem 12rem;
 }
 
 .job-card-wrapper {
@@ -126,12 +193,14 @@
 }
 
 .job-card-tag {
-  padding: 4px 8px;
+  padding: 6px 8px;
   background-color: hsl(180, 52%, 96%);
   color: hsl(180, 29%, 50%);
   font-weight: 700;
   border-radius: 4px;
   cursor: pointer;
+  display: flex;
+  align-items: center;
 }
 
 .job-card-tag.selected {
