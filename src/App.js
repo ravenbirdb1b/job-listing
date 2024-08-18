@@ -19,7 +19,6 @@ function App() {
 
       let isFiltered = true;
       for (let index = 0; index < filters.length; index++) {
-        console.log(filters[index], tags);
         if (!tags.has(filters[index])) {
           isFiltered = false;
           break;

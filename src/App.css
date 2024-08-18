@@ -51,6 +51,7 @@
 .filter-content {
   display: flex;
   gap: 12px;
+  flex-wrap: wrap;
 }
 
 .filter-card.job-card-tag {
@@ -190,6 +191,7 @@
   display: flex;
   gap: 12px;
   flex-wrap: wrap;
+  margin-left: 10px;
 }
 
 .job-card-tag {
@@ -208,11 +210,60 @@
   color: #fff;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 1024px) {
+  .job-listing-wrapper {
+    padding: 6rem;
   }
-  to {
-    transform: rotate(360deg);
+  .filter-card-wrapper {
+    width: calc(100% - 12rem);
+    margin: 0px 6rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .job-listing-wrapper {
+    padding: 3rem;
+  }
+  .filter-card-wrapper {
+    width: calc(100% - 6rem);
+    margin: 0px 3rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .job-listing-wrapper {
+    padding: 1.5rem;
+  }
+  .filter-card-wrapper {
+    width: calc(100% - 3rem);
+    margin: 0px 1.5rem;
+  }
+  .job-card-wrapper {
+    display: block;
+    position: relative;
+    padding: 1rem;
+    margin: 2.5rem 0px;
+  }
+  .job-card-content-wrapper {
+    display: block;
+  }
+  .job-card-image {
+    width: fit-content;
+    position: absolute;
+    top: -22px;
+  }
+  .card-img {
+    width: 44px;
+    height: 44px;
+  }
+  .company-name-wrapper {
+    margin-top: 1rem;
+  }
+  .job-metadata-wrapper {
+    padding-bottom: 16px;
+    border-bottom: 1px solid hsl(180, 8%, 52%);
+  }
+  .job-card-tag-info {
+    margin-top: 16px;
   }
 }

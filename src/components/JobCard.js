@@ -46,7 +46,7 @@ const JobCard = (props) => {
     <div className={`job-card-wrapper ${selected ? "selected" : ""}`}>
       <div className="job-card-content-wrapper">
         <div className="job-card-image">
-          <img src={logo} alt={company} />
+          <img src={logo} alt={company} className="card-img" />
         </div>
 
         <div className="job-content">
