@@ -6,9 +6,7 @@ This is a solution to the [Job listings with filtering challenge on Frontend Men
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
   - [Links](#links)
-- [My process](#my-process)
   - [Built with](#built-with)
 - [Author](#author)
 
@@ -22,14 +20,10 @@ Users should be able to:
 - See hover states for all interactive elements on the page
 - Filter job listings based on the categories
 
-### Screenshot
-
-![](./job-listing.jpg)
-
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Github solution](https://github.com/ravenbirdb1b/job-listing)
+- Live Site URL: [Live site URL](https://master--glittery-cascaron-99fa88.netlify.app/)
 
 ## My process
 
@@ -42,5 +36,5 @@ Users should be able to:
 
 ## Author
 
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/ravenbirdb1b)
-- Twitter - [@yourusername](https://x.com/gauravc23065787)
+- Frontend Mentor - [@ravenbirdb1b](https://www.frontendmentor.io/profile/ravenbirdb1b)
+- Twitter - [@gauravc23065787](https://x.com/gauravc23065787)
